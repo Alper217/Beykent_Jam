@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlacementManager : MonoBehaviour
 {
     [SerializeField] private GameObject mouseIndicator;
-    //[SerializeField] private GameObject cellIndicator;
+    [SerializeField] private GameObject cellIndicator;
     [SerializeField] private InputManager inputManager;
     [SerializeField] private Grid grid;
 
@@ -15,6 +15,7 @@ public class PlacementManager : MonoBehaviour
         Vector3 mousePosition = inputManager.GetSelectedMousePosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
         mouseIndicator.transform.position = mousePosition;
+        cellIndicator.transform.position = grid.CellToWorld(gridPosition);
         
     }
 }
