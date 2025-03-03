@@ -1,12 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
+
     [SerializeField] private Camera _camera;
     [SerializeField] private LayerMask placementLayerMask;
     private Vector3 lastPosition;
+    public event Action OnClicked, OnExit;
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            OnClicked?.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnExit?.Invoke(); 
+        }
+
+        
+    }
+    public bool isPointerUI()
+        => EventSystem.current.IsPointerOverGameObject();
 
     public Vector3 GetSelectedMousePosition()
     {
