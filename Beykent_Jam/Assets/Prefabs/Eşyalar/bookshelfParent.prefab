@@ -52,12 +52,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8638886431721728388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71bc70428ae012a459d7d82da4d16f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixingUIPrefab: {fileID: 4736397978255908557, guid: 8c4594397ab49814d8a61628c23bf34a, type: 3}
+  fixingUI: {fileID: 0}
+  fixingButtons: []
+  importantFixingPoints: []
 --- !u!1001 &388688014884346510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1064,8 +1066,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.12925836, z: 0.98408324}
-  m_Center: {x: -1.000001, y: 0.8708592, z: 0.45706877}
+  m_Size: {x: 2, y: 0.12925836, z: 0.71051174}
+  m_Center: {x: -1.000001, y: 0.8708592, z: 0.593855}
 --- !u!65 &7818456198687699300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1085,8 +1087,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.16873547, z: 0.81201816}
-  m_Center: {x: -1.000001, y: 1.7484618, z: 0.4060074}
+  m_Size: {x: 2, y: 0.16873547, z: 0.6090005}
+  m_Center: {x: -1.000001, y: 1.7484618, z: 0.5075172}
 --- !u!65 &352765083894104210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1106,8 +1108,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.2108409, z: 0.7802101}
-  m_Center: {x: -1.000001, y: 3.4880788, z: 0.39010328}
+  m_Size: {x: 2, y: 0.2108409, z: 0.58679116}
+  m_Center: {x: -1.000001, y: 3.4880788, z: 0.48681393}
 --- !u!4 &4039565454079868519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 159b0f024ba0141449215b08aaa14346, type: 3}
