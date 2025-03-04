@@ -15,8 +15,8 @@ public class PlacementManager : MonoBehaviour
     private GridData floorData, furnitureData;
 
     private List<GameObject> placedGameObjects = new();
-
     private Renderer previewRenderer;
+    private int currentRotation = 0;
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class PlacementManager : MonoBehaviour
     public void StartPlacement(int ID)
     {
         StopPlacement();
-        selectedObjectIndex = database.objectsData.FindIndex(data  => data.ID == ID);
+        selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
         if (selectedObjectIndex < 0)
         {
             Debug.LogError($"No ID Found {ID}");
@@ -39,11 +39,12 @@ public class PlacementManager : MonoBehaviour
         cellIndicator.SetActive(true);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
+        currentRotation = 0;
     }
 
     private void PlaceStructure()
     {
-        if(inputManager.isPointerUI())
+        if (inputManager.isPointerUI())
         {
             return;
         }
@@ -51,19 +52,20 @@ public class PlacementManager : MonoBehaviour
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
         bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
-        if (placementValidity == false )
+        if (!placementValidity)
         {
             return;
         }
 
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].Prefab);
         newObject.transform.position = grid.CellToWorld(gridPosition);
-        placedGameObjects.Add( newObject );
+        newObject.transform.rotation = Quaternion.Euler(0, currentRotation, 0);
+        placedGameObjects.Add(newObject);
+
         GridData selectedData = database.objectsData[selectedObjectIndex].ID == 0 ? floorData : furnitureData;
         selectedData.AddObjectAt(gridPosition, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].ID, placedGameObjects.Count - 1);
-
     }
-        
+
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedObjectIndex)
     {
         GridData selectedData = database.objectsData[selectedObjectIndex].ID == 0 ? floorData : furnitureData;
@@ -81,15 +83,20 @@ public class PlacementManager : MonoBehaviour
 
     private void Update()
     {
-        if (selectedObjectIndex < 0) { return; } 
+        if (selectedObjectIndex < 0) { return; }
         Vector3 mousePosition = inputManager.GetSelectedMousePosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
         bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
-       previewRenderer.material.color = placementValidity ? Color.white : Color.red;
+        previewRenderer.material.color = placementValidity ? Color.white : Color.red;
 
         mouseIndicator.transform.position = mousePosition;
-        cellIndicator.transform.position = grid.CellToWorld(gridPosition); 
-        
+        cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+        cellIndicator.transform.rotation = Quaternion.Euler(0, currentRotation, 0);
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            currentRotation = (currentRotation + 90) % 360;
+        }
     }
 }
