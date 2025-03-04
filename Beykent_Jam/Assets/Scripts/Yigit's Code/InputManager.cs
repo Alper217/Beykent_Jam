@@ -22,7 +22,10 @@ public class InputManager : MonoBehaviour
         {
             OnExit?.Invoke(); 
         }
-
+        if(Input.GetKeyUp(KeyCode.X))
+        {
+            transform.rotation = Quaternion.Euler(0,90,0);
+        }
         
     }
     public bool isPointerUI()

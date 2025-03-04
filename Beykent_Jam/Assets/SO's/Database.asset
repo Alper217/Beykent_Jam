@@ -16,8 +16,28 @@ MonoBehaviour:
   - <Name>k__BackingField: Bed
     <ID>k__BackingField: 0
     <Size>k__BackingField: {x: 10, y: 20}
-    <Prefab>k__BackingField: {fileID: 523890176574062902, guid: 58d56d579a7021940bf1014099e926f7, type: 3}
+    <Prefab>k__BackingField: {fileID: 4725207643898092526, guid: f8a0215e7e5ecd047aed5f6388b7cf71, type: 3}
   - <Name>k__BackingField: Chair
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 10, y: 10}
-    <Prefab>k__BackingField: {fileID: 8989702711925368312, guid: dae13f09530683c42a8fbefcc189f130, type: 3}
+    <Prefab>k__BackingField: {fileID: 1097635092644463166, guid: bf9f4f9f8460f8644b9c96a8cfedd7a0, type: 3}
+  - <Name>k__BackingField: Komidin
+    <ID>k__BackingField: 2
+    <Size>k__BackingField: {x: 10, y: 10}
+    <Prefab>k__BackingField: {fileID: 6913455075441887682, guid: 6f86ed65465684e4c9cea20f909b7c8f, type: 3}
+  - <Name>k__BackingField: Masa
+    <ID>k__BackingField: 3
+    <Size>k__BackingField: {x: 10, y: 10}
+    <Prefab>k__BackingField: {fileID: 8187922095176338928, guid: cee7473ac0b37064b90cc4d9fe1a369c, type: 3}
+  - <Name>k__BackingField: Sifonh
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 10, y: 10}
+    <Prefab>k__BackingField: {fileID: 4303386915752469654, guid: 100c02fdfebcc974a87548abec3a725b, type: 3}
+  - <Name>k__BackingField: Sifonyer
+    <ID>k__BackingField: 5
+    <Size>k__BackingField: {x: 10, y: 10}
+    <Prefab>k__BackingField: {fileID: 6052654010143292128, guid: 92f04d4daee6e704ba285221adac3a6b, type: 3}
+  - <Name>k__BackingField: Trash
+    <ID>k__BackingField: 6
+    <Size>k__BackingField: {x: 10, y: 10}
+    <Prefab>k__BackingField: {fileID: 6060927127440011641, guid: e8ce9422ddd145346ba4b942f43125fe, type: 3}
