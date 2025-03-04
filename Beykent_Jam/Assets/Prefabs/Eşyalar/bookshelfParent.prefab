@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8913105727653808693}
+  - component: {fileID: 1202298979406988074}
   m_Layer: 0
   m_Name: bookshelfParent
   m_TagString: Untagged
@@ -44,6 +45,19 @@ Transform:
   - {fileID: 7726196455822135376}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1202298979406988074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8638886431721728388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc70428ae012a459d7d82da4d16f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixingUIPrefab: {fileID: 4736397978255908557, guid: 8c4594397ab49814d8a61628c23bf34a, type: 3}
 --- !u!1001 &388688014884346510
 PrefabInstance:
   m_ObjectHideFlags: 0
