@@ -41,3 +41,7 @@ MonoBehaviour:
     <ID>k__BackingField: 6
     <Size>k__BackingField: {x: 10, y: 10}
     <Prefab>k__BackingField: {fileID: 6060927127440011641, guid: e8ce9422ddd145346ba4b942f43125fe, type: 3}
+  - <Name>k__BackingField: "Kitapl\u0131k"
+    <ID>k__BackingField: 7
+    <Size>k__BackingField: {x: 10, y: 10}
+    <Prefab>k__BackingField: {fileID: 7852480006623417812, guid: f4290a2ed918d3245abc459d2166a423, type: 3}
