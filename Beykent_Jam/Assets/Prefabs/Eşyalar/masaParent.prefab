@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 52316250ec3cd724ab8b5a2c332c854b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bcb4fe3dd9f8842d4b1f5a8bf0d4c1ad, type: 2}
+      objectReference: {fileID: 2100000, guid: 43a4fb79a50cb4682921649eb0f9ddfe, type: 2}
     - target: {fileID: 919132149155446097, guid: 52316250ec3cd724ab8b5a2c332c854b, type: 3}
       propertyPath: m_Name
       value: masa
